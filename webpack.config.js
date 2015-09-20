@@ -1,11 +1,19 @@
 var path = require('path');
+var webpack = require("webpack");
 
 module.exports = {
-    entry: "./entry.js",
+    entry: {
+      entry: "./entry.js",
+      second: "./second.js"
+    },
     output: {
         path: __dirname,
-        filename: "bundle.js"
+        filename: "[name]-bundle.js"
     },
+    // externals: {
+    //   'jquery': 'jquery'
+    // },
+    plugins: [ new webpack.optimize.CommonsChunkPlugin("init.js") ],
     module: {
         loaders: [
             { test: /\.css$/, loader: "style!css" }
