@@ -1,3 +1,5 @@
+var path = require('path');
+
 module.exports = {
     entry: "./entry.js",
     output: {
@@ -10,6 +12,10 @@ module.exports = {
         ]
     },
     resolve: {
-      extensions: ["", ".js"]
+      extensions: ["", ".js"],
+      root: [path.join(__dirname, 'bower_components')],
+      alias: {
+        jquery: './bower_components/jquery/dist/jquery.js'
+      }
     }
 };
