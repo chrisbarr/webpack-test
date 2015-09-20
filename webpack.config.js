@@ -12,10 +12,10 @@ module.exports = {
         ]
     },
     resolve: {
-      extensions: ["", ".js"],
-      root: [path.join(__dirname, 'bower_components')],
-      alias: {
-        jquery: './bower_components/jquery/dist/jquery.js'
-      }
+      // extensions: ["", ".js"],
+      root: [path.join(__dirname, 'bower_components')]
+      // alias: {
+      //   jquery: './bower_components/jquery/dist/jquery.js'
+      // }
     }
 };
